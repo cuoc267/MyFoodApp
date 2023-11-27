@@ -33,22 +33,16 @@ public class DailyMealFragment extends Fragment {
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
         dailyMealModelList = new ArrayList<>();
 
-        dailyMealModelList.add(new DailyMealModel(R.drawable.breakfast,"Breakfast","30% OFF","Description Description"));
-        dailyMealModelList.add(new DailyMealModel(R.drawable.lunch,"Lunch","20% OFF","Description Description"));
-        dailyMealModelList.add(new DailyMealModel(R.drawable.dinner,"Dinner","30% OFF","Description Description"));
-        dailyMealModelList.add(new DailyMealModel(R.drawable.sweets,"Sweets","39% OFF","Description Description"));
-        dailyMealModelList.add(new DailyMealModel(R.drawable.coffe,"Coffee","20% OFF","Description Description"));
+        dailyMealModelList.add(new DailyMealModel(R.drawable.breakfast,"Breakfast","30% OFF","Description Description","breakfast"));
+        dailyMealModelList.add(new DailyMealModel(R.drawable.lunch,"Lunch","20% OFF","Description Description","lunch"));
+        dailyMealModelList.add(new DailyMealModel(R.drawable.dinner,"Dinner","30% OFF","Description Description","dinner"));
+        dailyMealModelList.add(new DailyMealModel(R.drawable.sweets,"Sweets","39% OFF","Description Description","sweets"));
+        dailyMealModelList.add(new DailyMealModel(R.drawable.coffe,"Coffee","20% OFF","Description Description","coffee"));
 
         dailyMealAdapter = new DailyMealAdapter(getContext(),dailyMealModelList);
         recyclerView.setAdapter(dailyMealAdapter);
         dailyMealAdapter.notifyDataSetChanged();
         return root;
     }
-//
-//    @Override
-//    public void onDestroyView() {
-//        super.onDestroyView();
-//        binding = null;
-//    }
 
 }
